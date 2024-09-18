@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewJeans 앨범</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #E8C7EF;
+        }
+
+        .album-info {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            max-width: 800px; /* 적절한 최대 너비 설정 */
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .album-info img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .album-info h1 {
+            margin: 0 0 10px 0;
+        }
+
+        .album-info p {
+            margin: 0;
+            word-wrap: break-word; /* 긴 단어 줄바꿈 처리 */
+            max-width: 500px; /* 본문 너비 제한 */
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="album-info">
+        <img src="Supernatural.jpeg" alt="NewJeans 앨범">
+        <div>
+            <h1>Supernatural</h1>
+            <p>타이틀 곡 'Supernatural' 은 세계적인 아티스트 Pharrell Williams의 2009년 프로듀싱작 'Back of My Mind'에서 그만의 아이코닉한 애드립과 브릿지를 따와 뉴진스에 맞게 Mellow 한 뉴잭스윙으로 재해석한 곡이다. 노스텔지어를 불러일으키는 듯한 멜로디가 뉴진스 멤버들의 감성적인 보컬과 절묘한 조화를 이루어 독특한 매력을 극대화한다.</p>
+            <audio id="supernatural" src="supernatural.mp3" autoplay></audio>
+            <div class="controls">
+                <button onclick="window.location.href='page4.html'">이전</button>
+                <button onclick="nextSong()">다음</button>
+                <button onclick="window.location.href='index.html'">처음으로</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSongIndex = 1; // 'supershy.mp3'는 배열에서 1번 인덱스
+
+        const songs = ['attention.mp3', 'omg.mp3', 'supershy.mp3', 'howsweet.mp3', 'supernatural.mp3'];
+
+        function playSong(index) {
+            const audio = document.getElementById('supernatural');
+            audio.src = songs[index];
+            audio.play();
+            currentSongIndex = index;
+        }
+
+        function previousSong(howsweet) {
+            // '이전' 버튼 클릭 시 page2.html로 이동
+            window.location.href = 'page4.html';
+        }
+
+         function nextSong() {
+            // '다음' 버튼 클릭 시 page4.html로 이동
+            window.location.href = 'page5.html';
+        }
+    </script>
+</body>

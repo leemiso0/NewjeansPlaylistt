@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewJeans 앨범</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #DDC5CB;
+        }
+
+        .album-info {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            max-width: 800px; /* 적절한 최대 너비 설정 */
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .album-info img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .album-info h1 {
+            margin: 0 0 10px 0;
+        }
+
+        .album-info p {
+            margin: 0;
+            word-wrap: break-word; /* 긴 단어 줄바꿈 처리 */
+            max-width: 500px; /* 본문 너비 제한 */
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="album-info">
+        <img src="OMG.jpeg" alt="NewJeans 앨범">
+        <div>
+            <h1>NewJeans 'OMG'</h1>
+            <p>첫 겨울을 맞이하는 NewJeans의 새 앨범 “OMG”는 조금은 묘한 거리감, 조금은 낯선 배경 속에서 다시 한번 관계를 이야기한다. 그리고 그 안에 특별하고 의미 있는 선물을 담아내고 있다. 1st. EP “New Jeans”에서 담아냈던, 사람의 관계와 끌림에 대해 이야기하며 함께 있을 때 더 빛나는 10대 소녀들이 들려주는 '우리'라는 서사는 모습을 바꿔가며 또 한 번 펼쳐진다. 낯섦을 지나 공감, 환대, 호혜에 기반을 둘 때, '우리'는 더 가까워지고, 함께 성장한다고 믿는다.</p>
+            <audio id="omg" src="omg.mp3" autoplay></audio>
+            <div class="controls">
+                <button onclick="window.location.href='page1.html'">이전</button>
+                <button onclick="nextSong()">다음</button>
+                <button onclick="window.location.href='index.html'">처음으로</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSongIndex = 1; // 'omg.mp3'는 배열에서 1번 인덱스
+
+        const songs = ['attention.mp3', 'omg.mp3', 'supershy.mp3', 'music4.mp3', 'music5.mp3'];
+
+        function playSong(index) {
+            const audio = document.getElementById('omg');
+            audio.src = songs[index];
+            audio.play();
+            currentSongIndex = index;
+        }
+
+        function previousSong() {
+            // '이전' 버튼 클릭 시 page1.html로 이동
+            window.location.href = 'page1.html';
+        }
+
+        function nextSong() {
+            // '다음' 버튼 클릭 시 page3.html로 이동
+            window.location.href = 'page3.html';
+        }
+    </script>
+</body>
+</html>
+

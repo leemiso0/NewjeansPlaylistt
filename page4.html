@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewJeans 앨범</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            font-family: 'Pretendard', sans-serif;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: #EDD0AE;
+        }
+
+        .album-info {
+            display: flex;
+            align-items: center;
+            text-align: left;
+            max-width: 800px; /* 적절한 최대 너비 설정 */
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .album-info img {
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            margin-right: 20px;
+        }
+
+        .album-info h1 {
+            margin: 0 0 10px 0;
+        }
+
+        .album-info p {
+            margin: 0;
+            word-wrap: break-word; /* 긴 단어 줄바꿈 처리 */
+            max-width: 500px; /* 본문 너비 제한 */
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        .controls button {
+            margin: 0 10px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="album-info">
+        <img src="HowSweet.jpeg" alt="NewJeans 앨범">
+        <div>
+            <h1>How Sweet</h1>
+            <p>뉴진스가 2024년 또다시 새로운 모습으로 돌아왔다. 타이틀 곡 'How Sweet'은 신선한 느낌을 선사하는 장르적 접근이 돋보이는 새롭고 독특한 매력의 Dance Pop 곡으로 Sparkle한 일렉트로닉 사운드가 중독성있는 곡이다. 또 함께 수록된 'Bubble Gum'은 트랙의 진행에 따른 다양한 무드 체인지를 통해 다채로운 매력을 느낄 수 있는 곡이다. 과장되지 않은 자연스러움으로 오히려 신선한 느낌을 선사하는 뉴진스 멤버들의 보컬과 개성있고 매력 넘치는 트랙들로 구성된 싱글 앨범 'How Sweet'은 한 번만 들어도 모든 이의 귀를 사로잡을 만큼 뉴진스의 매력을 잘 담아내고 있다. 그간 뉴진스를 기다려 온 전세계 팬들에게 화답이 되는 앨범이 되길 바란다.</p>
+            <audio id="supershy" src="howsweet.mp3" autoplay></audio>
+            <div class="controls">
+                <button onclick="window.location.href='page3.html'">이전</button>
+                <button onclick="nextSong()">다음</button>
+                <button onclick="window.location.href='index.html'">처음으로</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let currentSongIndex = 1; // 'supershy.mp3'는 배열에서 1번 인덱스
+
+        const songs = ['attention.mp3', 'omg.mp3', 'supershy.mp3', 'howsweet.mp3', 'music5.mp3'];
+
+        function playSong(index) {
+            const audio = document.getElementById('supershy');
+            audio.src = songs[index];
+            audio.play();
+            currentSongIndex = index;
+        }
+
+        function previousSong(omg) {
+            // '이전' 버튼 클릭 시 page2.html로 이동
+            window.location.href = 'page3.html';
+        }
+
+         function nextSong() {
+            // '다음' 버튼 클릭 시 page4.html로 이동
+            window.location.href = 'page5.html';
+        }
+    </script>
+</body>

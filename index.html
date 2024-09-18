@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewJeans Playlist</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background: #000000;
+            color: #ffffff; /* 제목 글씨 색상 흰색 */
+            font-family: 'Helvetica', sans-serif; /* 폰트 설정 */
+        }
+
+        .album-info {
+            text-align: center;
+            margin-bottom: 20px; /* 제목과 사진 사이의 간격 */
+        }
+
+        .album-info h1 {
+            font-size: 3rem; /* 제목의 폰트 사이즈 조절 */
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* 사진 사이의 여백 */
+        }
+
+        .gallery img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            cursor: pointer;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="album-info">
+        <h1>NewJeans Playlist</h1>
+        <p>앨범을 눌러 노래를 감상해 보세요!<p>
+    </div>
+
+    <div class="gallery">
+        <a href="page1.html">
+            <img src="NewJeans.jpeg" alt="Image 1">
+        </a>
+        <a href="page2.html">
+            <img src="OMG.jpeg" alt="Image 2">
+        </a>
+        <a href="page3.html">
+            <img src="GetUp.jpeg" alt="Image 3">
+        </a>
+        <a href="page4.html">
+            <img src="HowSweet.jpeg" alt="Image 4">
+        </a>
+        <a href="page5.html">
+            <img src="Supernatural.jpeg" alt="Image 5">
+        </a> 
+    </div>
+</body>
+</html>
+
+
